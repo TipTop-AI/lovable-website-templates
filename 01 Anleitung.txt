@@ -1,0 +1,53 @@
+## Besonderheit bei Lovable
+Lovable erlaubt es dir nicht, die im folgenden erstellten Dateien einfach
+in das eigene Projekt zu kopieren. Erstelle dir dafür einen Github Account
+und verknüpfe ihn über Lovable. Synchronisiere dann dein Projekt nach Github. 
+Jetzt kannst du Ordner und Dateien in dein Github Projekt hochladen und sie
+werden automatisch in dein Lovable Projekt synchronisiert.
+
+-----
+
+## 1. Projektbeschreibung
+Erstelle eine Projektbeschreibung (manuell oder mit ChatGPT), 
+in dem der Zweck und das Ziel deiner Anwendung klar wird und wer 
+die passende Zielgruppe ist. 
+
+## 2. Passe den PRD Prompt an
+Kopiere deine fertige Projektbeschreibung in den PRD Prompt. Setze
+sie zwischen den <prd_instructions> Tags ein. 
+
+## 3. PRD erstellen
+Starte einen ChatGPT Chat und füge den PRD Prompt ein um dir das fertige
+Dokument erstellen zu lassen. Prüfe das erstellte Dokument sorgfältig 
+auf Richtigkeit. Möglicherweise hat ChatGPT Funktionen vergessen, die du
+noch ergänzen möchtest. Sobald du fertig bist kannst du mit dem nächsten
+Dokument fortfahren. Speichere das erstellte Dokument in einer neuen 
+Markdown Datei und nenne sie PRD.md
+
+## SRS erstellen
+Öffne den SRS Prompt und ergänze deinen Tech-Stack zwischen den <tech_stack>
+Tags. Außerdem kannst du innerhalb der <visual_guide> Tags deine Design-
+Richtlinien festlegen (Farben, Schriftarten, etc.). Das PRD musst du nicht
+ergänzen, wenn du für den SRS Prompt dieselbe ChatGPT Konversation nutzt. 
+Kopiere also den SRS Prompt in ChatGPT und lasse dir das Dokument erstellen.
+Speichere das erstellte Dokument in einer neuen Markdown Datei und nenne 
+sie SRS.md
+
+## Weitere Dokumente
+Bei den restlichen Dokumenten kannst du die Prompts unverändert in die 
+ChatGPT Konversation übertragen und dir die Dokumente Schritt für Schritt
+erstellen lassen. Erstelle jeweils neue Markdown Dateien für die Dokumente
+und nenne sie DB.md, API.md & Roadmap.md. 
+
+## Erstelle deine Dateistruktur
+Lege in deinem neuen Lovable, Bolt, Cursor oder Windsurf Projekt einen 
+neuen Ordner namens project-files an und kopiere die von dir erstellen 
+Markdown Dateien in den Ordner. 
+
+## Nutze den Start Prompt
+Für den initialen Start deines Projekts kannst du den Start Prompt kopieren.
+Dieser gibt der AI den nötigen Kontext und sorgt dafür, dass sie die 
+erstellten Dateien berücksichtigt. Sie sollte außerdem mit der Umsetzung des
+1. Schritts aus der Roadmap anfangen. Sobald dieser erledigt wurde, kannst du
+das Ergebnis prüfen und bei Erfolg mit dem nächsten Schritt auf der Roadmap
+weitermachen. 

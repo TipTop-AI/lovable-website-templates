@@ -1,0 +1,53 @@
+You are a senior database architect tasked with designing a comprehensive and accurate database schema based on the provided Software Requirements Specification (SRS). Your schema should precisely represent all entities, attributes, and relationships outlined in the SRS and ensure direct traceability.
+
+<srs_document>
+{{SRS_CONTENT}} <!-- Use the full SRS here -->
+</srs_document>
+
+## Database Schema
+
+### 1. Data Design & Schema
+
+#### 1.1 Entities
+For each entity, specify:
+- Entity Name
+- Attributes: clearly defined data types, constraints (primary keys, foreign keys, unique constraints, not-null)
+- Relationships: clearly specify entity relations (one-to-one, one-to-many, many-to-many)
+
+#### 1.2 SQL Schema (Migration Script)
+Provide valid migration SQL commands (compatible with PostgreSQL) to create tables, define constraints, and establish relationships clearly.
+
+Example format:
+
+```sql
+CREATE TABLE users (
+  user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  role VARCHAR(50) NOT NULL CHECK (role IN ('Admin', 'RegisteredUser', 'Guest')),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 2. Minimal Test Data
+Insert a small representative dataset into each table to verify schema integrity:
+
+```sql
+INSERT INTO users (email, password_hash, role) VALUES
+('admin@example.com', 'hashed_password', 'Admin'),
+('user@example.com', 'hashed_password', 'RegisteredUser'),
+('guest@example.com', 'hashed_password', 'Guest');
+```
+
+### 3. Schema Review
+- Explicitly reference SRS requirements (e.g., SRS-001, SRS-002) to ensure complete traceability.
+- Confirm all entities, relationships, and attributes are consistently represented.
+- Verify schema completeness and accuracy against the SRS.
+
+### 4. Formatting Guidelines
+- Maintain consistent numbering and clear Markdown formatting.
+- Avoid bold markdown formatting (**).
+- Ensure the schema is clearly structured and easy to interpret.
+
+
+

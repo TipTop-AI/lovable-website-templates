@@ -1,0 +1,96 @@
+You are a senior software architect tasked with creating a clear, detailed, and actionable Software Requirements Specification (SRS) based on the provided Product Requirements Document (PRD). Ensure your SRS maintains direct traceability to the PRD, clearly references requirements, and strictly utilizes the specified technology stack.
+
+
+<prd_document>
+{{PRD_CONTENT}} <!-- Include the complete PRD here -->
+</prd_document>
+<tech_stack>
+- Frontend: NextJS
+- CSS: shadcn / TailwindCSS
+- Database: Supabase (PostgreSQL)
+</tech_stack>
+
+<visual_guide>
+Hier Design-Richtlinien, Corporate Identity etc. hinterlegen
+</visual_guide>
+
+## Steps to Create the SRS:
+
+### 1. Review the PRD
+- Clearly understand all functional and non-functional requirements outlined.
+- Identify and note critical dependencies and constraints.
+
+### 2. Document Structure
+Structure your SRS according to the following outline:
+
+# Software Requirements Specification (SRS)
+
+## 1. Introduction
+- Briefly describe the purpose, scope, and intended use of this SRS.
+- Summarize the software’s core functionality based on the PRD.
+
+## 2. Functional Requirements
+Organize into clear subsections:
+
+### 2.1 Core Features
+- CRUD Operations (Create, Read, Update, Delete)
+- Business Rules:
+  - Validation rules
+  - Calculation or transformation logic
+  - Domain-specific constraints
+- Workflow and Process Flows:
+  - Detail multi-step processes
+  - State transitions (if applicable)
+- Data Management requirements
+
+### 2.2 Authentication and Authorization
+- Define clearly each user role (e.g., Admin, Registered User, Guest).
+- Explicitly outline permissions for each role.
+- Reference relevant PRD requirements directly (e.g., PRD-001).
+- Provide specific acceptance criteria per role constraint (e.g., "Admin can create user accounts," "Guest can view but not modify content").
+
+Each Functional Requirement should follow this structure:
+
+- **ID**: FR-XXX
+- **Title**: [Requirement Title]
+- **Description**: [Clear description]
+- **Rationale**: [Justification or reason for requirement]
+- **Dependencies**: [Explicit PRD references]
+- **Acceptance Criteria**: [Clear and testable]
+
+## 3. Data Requirements
+- Detail database schema requirements aligned with PRD (tables, fields, data types).
+- Outline relationships, constraints, and validations clearly.
+- Reference PRD IDs to maintain traceability.
+
+## 4. System Interface Requirements
+- Specify interfaces between frontend (NextJS) and backend (Supabase/PostgreSQL).
+- Clearly document API endpoints, methods (GET, POST, etc.), and required parameters.
+- Detail interactions and data exchanges with clarity.
+
+## 5. Use Cases
+- Provide comprehensive use cases for each primary feature:
+
+- **ID**: UC-XXX
+- **Title**: [Use Case Title]
+- **Actor(s)**: [List actors]
+- **Preconditions**: [Conditions before use case execution]
+- **Main Flow**: [Step-by-step main flow]
+- **Alternative Flows**: [Alternative paths, if applicable]
+- **Postconditions**: [State of system after execution]
+
+### 3. Requirements Traceability
+- Explicitly cross-reference each SRS item back to the PRD requirements.
+- Ensure every requirement from the PRD is covered and addressed.
+
+### 4. Technical Constraints
+- Strictly adhere to the defined tech stack (NextJS, shadcn/TailwindCSS, Supabase/PostgreSQL).
+- Avoid using external APIs or dependencies unless explicitly mentioned in the PRD.
+
+### 5. Formatting Guidelines
+- Consistent numbering and clear Markdown formatting.
+- Do not use bold markdown formatting (**).
+- Clearly structure each section, subsection, and requirement.
+
+
+

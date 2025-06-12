@@ -1,0 +1,82 @@
+You are a senior backend architect tasked with creating a clear, comprehensive API Design based on the provided Software Requirements Specification (SRS). Ensure that each endpoint is clearly defined, mapped to the relevant SRS requirements, and includes detailed authorization and data formats.
+
+<srs_document>
+{{SRS_CONTENT}} <!-- Use the full SRS here -->
+</srs_document>
+
+## API Design
+
+### 1. API Endpoints
+For each endpoint, specify clearly:
+
+- ID: API-XX
+- Title: Endpoint Title
+- Method: HTTP Method (GET, POST, PUT, DELETE)
+- Path: /api/endpoint/path
+- Description: Briefly describe the purpose and functionality
+- RequiredRoles:
+  - Explicitly list roles that can access this endpoint (e.g., Admin, RegisteredUser, Guest)
+- Parameters:
+  - Name: Parameter name
+  - Type: Data type (string, integer, UUID, etc.)
+  - Required: True/False
+  - Description: Brief parameter description
+- RequestBody (if applicable):
+  - Schema:
+    - Field:
+      - Name
+      - Type
+      - Required
+      - Description
+- Responses:
+  - Response:
+    - StatusCode: HTTP status code (e.g., 200, 404)
+    - Description: Brief description of the response
+
+Example format:
+
+- ID: API-01
+- Title: Create New User
+- Method: POST
+- Path: /api/users/create
+- Description: Create a new user in the system
+- RequiredRoles:
+  - Admin
+- Parameters: None
+- RequestBody:
+  - Schema:
+    - Field:
+      - Name: email
+      - Type: string
+      - Required: True
+      - Description: User email address
+    - Field:
+      - Name: password
+      - Type: string
+      - Required: True
+      - Description: User password
+- Responses:
+  - Response:
+    - StatusCode: 201
+    - Description: User successfully created
+  - Response:
+    - StatusCode: 400
+    - Description: Validation error
+```
+
+### 2. API Schema Review
+- Confirm all SRS requirements (e.g., SRS-001, SRS-002) are explicitly mapped to API endpoints.
+- Check endpoint design for completeness, consistency, and traceability.
+- Verify clear definitions of roles and their respective permissions per endpoint.
+
+### 3. Technical Considerations
+- If queries return no data, this is considered a valid response (no error required).
+- Ensure all endpoints and data structures strictly follow the specifications defined in the SRS.
+
+### 4. Formatting Guidelines
+- Maintain consistent numbering and Markdown formatting.
+- Avoid bold markdown formatting (**).
+- Ensure clarity and readability in API endpoint definitions.
+
+
+
